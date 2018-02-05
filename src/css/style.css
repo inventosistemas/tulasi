@@ -2578,6 +2578,7 @@ body {
     background: #F15A22;
     left: 0;
         font-family: Futura Round;
+		z-index:1;
 
 }
 .scheme_1 .product_listing_main .product_info {
