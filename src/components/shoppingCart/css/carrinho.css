@@ -1,0 +1,284 @@
+@font-face {
+    font-family: 'futuraround-regular';
+    src: url('../../../fonts/subset-FuturaRound-Book.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'futuraround-bold';
+  src: url('../../../fonts/subset-FuturaRound-Bold.woff') format('woff');
+} 
+
+/* body {
+  font-family: 'futuraround-regular', Arial, sans-serif;
+} */
+
+.carrinho {
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo {
+  width: 100%;
+  margin: 0 auto;
+  height: 250px;
+  /*flex-direction: column;*/
+  flex-flow: column wrap;
+}
+
+.conteudo .container {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+ /* Radio Button */
+input.cartao-radio[type="radio"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+input.cartao-radio[type="radio"]:checked + label,
+input.cartao-radio[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    font-size: 16px;
+    color: #434345;
+}
+
+input.cartao-radio[type="radio"] + label span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+
+input.cartao-radio[type="radio"]:checked + label span:after{
+    content:'';
+    width: 12px;
+    height: 12px;
+    background: #66C4B3;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+/*----------------------------------------------*/
+/* Meu CartÃµes */
+
+.meuscartoes {
+  margin-left: 40px;
+  width: 17%;
+}
+
+/* Portrait and Landscape */
+@media only screen
+
+  and (max-device-width: 768px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    .meuscartoes {
+      margin-left: 10px;
+      width: 90%;
+    }
+
+}
+
+p.titulo {
+    font-size: 30px;
+    color: #434345;
+    font-weight: 600;
+    
+    margin: 30px 0px;
+}
+
+
+.delete {
+  margin-left: 10px;
+}
+
+/* FIM Meus CartÃµes */
+/*----------------------------------------------*/
+/* Dados CartÃµes */
+
+.dadoscartoes{
+  margin-left: 80px;
+  width: 40%;
+}
+
+@media only screen
+
+  and (max-device-width: 768px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    .dadoscartoes {
+      margin-left: 10px;
+      width: 90%;
+    }
+
+}
+
+@media (max-width: 320px) {
+  .cdebito {
+    margin-top: 15px;
+  }
+}
+
+
+.dadoscartoes .tipocartao{
+  display: flex;
+  flex-wrap: wrap;
+
+  /*  align-items: center;
+    justify-content: space-between; */
+}
+
+.ccredito {
+  margin-left: 10px;
+}
+
+.cdebito {
+  margin-left: 10px;
+
+}
+
+.infocartao1 {
+  margin-top: 40px;
+}
+
+
+.dadoscartoes .infocartao2{
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+
+input.cartao[type=text], input.cartao[type=number], select.cartao {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #66C4B3;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #000;
+    opacity: 0.5;
+    font-family: "Futura Round Book";
+    height: 34px;
+}
+
+input.cartao[type=text]:focus, input.cartao[type=number]:focus {
+    border: 2px solid #aaa
+}
+
+.ano {
+    margin-left: 10px;
+}
+
+.cod {
+    margin-left: 10px;
+}
+
+
+.salvarcartao {
+  padding-top: 20px;
+}
+
+
+
+
+
+/* FIM Dados CartÃµes */
+/*----------------------------------------------*/
+/* Total */
+
+.total {
+  margin-left: 80px;
+}
+
+.total p {
+    margin: initial;
+}
+
+.total p.titulo {
+    font-size: 30px;
+    color: #434345;
+    font-weight: 600;
+    
+    margin: 30px 0px;
+}
+
+@media only screen
+
+  and (max-device-width: 768px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    .total {
+      margin-left: 10px;
+      width: 90%;
+    }
+
+}
+
+.valor-unico {
+  margin-left: 50px;
+}
+
+.total-conteudo {
+  /* display: flex; */
+  /* height: 200px; */
+  /* flex-flow: column wrap; */
+  line-height: 5px;
+}
+
+.total .total-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.total .pagamento-traco-botao a{
+  padding: 10px;
+  background: #03987C;
+  border-radius: 4px;
+  display: block;
+  transition: .5s;
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  font-family: futuraround-bold;
+}
+
+.total .pagamento-traco-botao a:hover {
+  background: #5d335f;
+  color: #fff;
+  text-decoration: none;
+}
+
+.total .pagamento-traco-botao a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.total-wrap p {
+  color: #434345;
+  font-size: 18px;
+}
+/* FIM total */
+/*----------------------------------------------*/
